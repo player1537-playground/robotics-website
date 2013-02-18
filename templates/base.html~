@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Team 3140</title>
+    <link rel="stylesheet" href="index.css" >
+    <link rel="shortcut icon" href="favicon.ico" >
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="slidesjs/slides.jquery.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="imagethingy" class="backgroundLogo"></div>
+      <div class="header">
+	{% block header %}
+	{% buttons = [("home", "HOME"), ("first", "FIRST"), ("team", "The Team"), ("sponsors", "Sponsors"), ("resources", "Resources"), ("contactus", "Contact Us")] %}
+	{% for index, (href, button) in buttons %}
+	<span 
+	   class="button{{ "-first" if index == 0 else "-last" if index == len(buttons) else ""}}"
+	   id="{{ href }}">
+	  <a href="{{ url_for(href) }}">{{ button }}</a>
+	</span>
+	{% endfor %}
+	{% endblock %}
+      </div>
+      <div id="content">
+	{% block content %}
+      </div>
+    </div>
+    <div class="spacer">&nbsp;</div>
+    <div id="chalkWrapper"><div id="backgroundchalk"></div></div>
+  </body>
+</html>

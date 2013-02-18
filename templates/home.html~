@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 >Welcome to Flagship 3140</h1>
+<div id="slideshowwrapper" onmouseover="showoverlay()" onmouseout="hideoverlay()">
+  <div id="slideshow">
+    <div class="slide_container">
+      <div><img src="http://placehold.it/400x350"></div>
+      <div><img src="http://placehold.it/400x350"></div>
+      <div><img src="http://placehold.it/400x350"></div>
+      <div><img src="http://placehold.it/400x350"></div>
+      <div><img src="http://placehold.it/400x350"></div>
+    </div>
+  </div>
+  <div id="caption"><h3 id="captiontext">Working on the Robot</h3><p id="captiontext">Bag and tag day on February 21st at 8:27 PM</p></div>
+</div>
+<p>We are Flagship Robotics, a little robotics club from Farragut, TN. We bring students together that are interested in Science, Technology, Engineering, Math, Computer Programming, Marketing, and Media to create a functioning robot to enter in the <a href="http://usfirst.org">FIRST Robotics Competition</a> (FRC). Our team is student led, with the mentors playing a crucial role without doing a majority of the work. Students take initiative in leading and learning from each other. In addition to building a robot, we also reach out to the community and help other FIRST Teams. We do this by spreading knowledge of FIRST through multimedia and by helping the community. We host a merit badge workshop for the local boy scout troops and even hosting a summer camp for younger children that have an interest in robotics.</p>
+<img src="images/gallerypaper.png" alt="Link to Gallery" class="pointercursor" onclick="disp('gallery')" />
+{% endblock %}
+{% block javascript %}
+$(function() {
+  $("#slideshow").slides({
+    preload: true,
+    generateNextPrev: true
+  })
+});
+{% endblock %}
+

@@ -1,0 +1,19 @@
+<h1>Gallery</h1>
+<div id="galleryyears">
+	<img alt="2011-2012" src="images/2012button.png" onclick="dispGallery('2012')" title="2012" /><br /><br />
+	<img alt="2010-2011" src="images/2011button.png" onclick="dispGallery('2011')" title="2011" /><br /><br />
+	<img alt="2009-2010" src="images/2010button.png" onclick="dispGallery('2010')" title="2009" /><br /><br />
+</div>
+<div id="vsb">
+	<img id="vsbtopbutton" src="images/topbutton.png" alt="Top Button" onmousedown="scrolldown()" onmouseup="stopscroll()" onmouseout="stopscroll()"/>
+	<div id="vsbpicturewrapper">
+		<div id="vsbdiv0"><img id="vsbpic0" class="vsbpic" onclick="setgalleryimage(this)"/></div>
+		<div id="vsbdiv1"><img id="vsbpic1" class="vsbpic" onclick="setgalleryimage(this)"/></div>
+		<div id="vsbdiv2"><img id="vsbpic2" class="vsbpic" onclick="setgalleryimage(this)"/></div>
+		<div id="vsbdiv3"><img id="vsbpic3" class="vsbpic" onclick="setgalleryimage(this)"/></div>
+	</div>
+	<img id="vsbbottombutton" src="images/bottombutton.png" alt="Bottom Button" onmousedown="scrollup()" onmouseup="stopscroll()" onmouseout="stopscroll()"/>
+</div>
+<div id="gallery">
+	<img id="currentpic" alt="Current Picture" src="images/2012_slides/slide-8.jpg">
+</div>
